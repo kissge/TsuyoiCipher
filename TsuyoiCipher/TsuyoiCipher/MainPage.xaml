@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TsuyoiCipher"
+             x:Class="TsuyoiCipher.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.Column="0">
+            <Label Text="{Binding Plaintext.Length, StringFormat='Plaintext ({0}):'}" />
+            <Editor Text="{Binding Plaintext, Mode=TwoWay}" VerticalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout Grid.Column="1">
+            <Label Text="{Binding Ciphertext.Length, StringFormat='Ciphertext ({0}):'}" />
+            <Editor Text="{Binding Ciphertext, Mode=TwoWay}" VerticalOptions="FillAndExpand" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
